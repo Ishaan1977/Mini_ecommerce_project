@@ -7,23 +7,24 @@ A distributed data engineering pipeline built with **PySpark** on Databricks to 
 ## Project Architecture & Pipeline Workflow
 
 The pipeline transitions raw, unstructured transactional records into optimized analytical outputs through a sequential multi-stage engineering workflow:
-[Synthetic Customers & Orders Data]
-│
-▼
-[Data Cleansing Layer] ────► (Type Casting, Fault Mitigation & Feature Extraction)
-│
-▼
-[Advanced Aggregations] ──► (Window Functions, Pivot Tables & State Partitions)
-│
-▼
-[Relational Integration] ─► (Inner Join on Customer Lifecycle + Orders Transactions)
-│
-▼
-[Business Intelligence] ──► (RFM Profiling, Behavioral Segmentation & Trend Analysis)
-│
-▼
-[Optimized Storage Layer] ─► (Pandas-Assisted Local Workspace Write/Parquet)
-
+```text
+[Synthetic Customers & Orders Data] 
+                 │
+                 ▼
+     [Data Cleansing Layer] ────► (Type Casting, Fault Mitigation & Feature Extraction)
+                 │
+                 ▼
+     [Advanced Aggregations] ──► (Window Functions, Pivot Tables & State Partitions)
+                 │
+                 ▼
+     [Relational Integration] ─► (Inner Join on Customer Lifecycle + Orders Transactions)
+                 │
+                 ▼
+     [Business Intelligence] ──► (RFM Profiling, Behavioral Segmentation & Trend Analysis)
+                 │
+                 ▼
+     [Optimized Storage Layer] ─► (Pandas-Assisted Local Workspace Write/Parquet)
+```
 ---
 
 ## Core Technical Features
